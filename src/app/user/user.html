@@ -1,6 +1,13 @@
 <div>
     <button>
-        <img />
-        <span>Name</span>
+        <!-- property binding -->
+        <img [src]="'assets/users/' + selectedUser.avatar" [alt]="selectedUser.name" />
+
+        <!-- on the case of attribute binding, it must be added the "attr." -->
+        <!-- in front of the attribute you want to access to. -->
+        <!-- [attr.aria-exampleattr]="value" -->
+
+        <!-- string interpolation -->
+        <span>{{ selectedUser.name }}</span> 
     </button>
 </div>
