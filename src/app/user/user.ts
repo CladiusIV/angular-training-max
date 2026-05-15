@@ -9,8 +9,14 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   templateUrl: "./user.html",
   styleUrl: "./user.scss",
 })
+
 export class User {
   // in a class, you could define it as "private" and will be
   // just accesible within the class and not the template.
   selectedUser = DUMMY_USERS[randomIndex];
+
+  // setting a getter for the path of the avatars
+  get imagePath() {
+    return 'assets/users/' + this.selectedUser.avatar
+  }
 }
